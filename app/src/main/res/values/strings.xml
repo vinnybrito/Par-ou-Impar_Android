@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">ProjetoParOuImpar</string>
+
+    <!-- Main Activity -->
+    <string name="next_screen">Go to the Next Screem</string>
+
+    <!-- Even or Odd Fragment Screen -->
+    <string name="principal_value">0</string>
+    <string name="result">PAR</string>
+    <string name="plus_button">+</string>
+    <string name="minus_button">-</string>
+    <string name="clean_values">Clean Values</string>
+    <string name="return_to_activity">RETURN TO ACTIVITY</string>
+</resources>
