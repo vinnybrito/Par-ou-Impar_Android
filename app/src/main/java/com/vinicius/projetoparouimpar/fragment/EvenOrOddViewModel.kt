@@ -37,7 +37,7 @@ class EvenOrOddViewModel: ViewModel() {
         _numericValue.value = 0
     }
 
-    private fun evenOrOdd() {
+    fun evenOrOdd() {
         if(_numericValue.value?.rem(Int.TWO) == Int.ZERO) {
             if(_numericValue.value!! >= Int.ONE) {
                 _resultValue.value = EVEN_MESSAGE

@@ -11,8 +11,8 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
-import com.vinicius.projetoparouimpar.extensionsfiles.ZERO
 import com.vinicius.projetoparouimpar.databinding.FragmentEvenOrOddBinding
+import com.vinicius.projetoparouimpar.extensionsfiles.ZERO
 import kotlinx.coroutines.launch
 
 class EvenOrOddFragment: Fragment() {
@@ -28,7 +28,6 @@ class EvenOrOddFragment: Fragment() {
         binding = FragmentEvenOrOddBinding.inflate(inflater, container, false)
         return binding.root
     }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupListeners()

@@ -14,16 +14,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        setupListeners()
-    }
-
-    private fun setupListeners() {
-        binding.btnNextScreen.setOnClickListener {
-            supportFragmentManager
-                .beginTransaction()
-                .replace(R.id.fcv_even_or_odd, EvenOrOddFragment())
-                .commit()
-        }
     }
 
 }
