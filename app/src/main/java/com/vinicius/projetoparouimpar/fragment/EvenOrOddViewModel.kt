@@ -3,6 +3,8 @@ package com.vinicius.projetoparouimpar.fragment
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
+import com.vinicius.projetoparouimpar.extensions.EVEN_MESSAGE
+import com.vinicius.projetoparouimpar.extensions.ODD_MESSAGE
 import com.vinicius.projetoparouimpar.extensions.ONE
 import com.vinicius.projetoparouimpar.extensions.TWO
 import com.vinicius.projetoparouimpar.extensions.ZERO
@@ -37,7 +39,7 @@ class EvenOrOddViewModel : ViewModel() {
         _numericValue.value = Int.ZERO
     }
 
-    fun evenOrOdd() {
+    private fun evenOrOdd() {
         if (_numericValue.value?.rem(Int.TWO) == Int.ZERO) {
             if (_numericValue.value!! >= Int.ONE) {
                 _resultValue.value = EVEN_MESSAGE
@@ -48,9 +50,6 @@ class EvenOrOddViewModel : ViewModel() {
     }
 
     companion object {
-        private const val EVEN_MESSAGE = "PAR"
-        private const val ODD_MESSAGE = "ÍMPAR"
-
         fun newFactory() = viewModelFactory {
             initializer { EvenOrOddViewModel() }
         }
