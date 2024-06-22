@@ -12,10 +12,10 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import com.vinicius.projetoparouimpar.databinding.FragmentEvenOrOddBinding
-import com.vinicius.projetoparouimpar.extensionsfiles.ZERO
+import com.vinicius.projetoparouimpar.extensions.ZERO
 import kotlinx.coroutines.launch
 
-class EvenOrOddFragment: Fragment() {
+class EvenOrOddFragment : Fragment() {
 
     private lateinit var binding: FragmentEvenOrOddBinding
     private val viewModel: EvenOrOddViewModel by viewModels { EvenOrOddViewModel.newFactory() }
@@ -28,6 +28,7 @@ class EvenOrOddFragment: Fragment() {
         binding = FragmentEvenOrOddBinding.inflate(inflater, container, false)
         return binding.root
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupListeners()
@@ -59,21 +60,9 @@ class EvenOrOddFragment: Fragment() {
 
     private fun setupListeners() {
         with(binding) {
-            btnPlus.setOnClickListener {
-                viewModel.addValue()
-            }
-            btnMinus.setOnClickListener {
-                viewModel.subtractValue()
-            }
-            btnCleanValues.setOnClickListener {
-                viewModel.cleanValues()
-            }
-            btnReturnActivity.setOnClickListener {
-                parentFragmentManager
-                    .beginTransaction()
-                    .remove(this@EvenOrOddFragment)
-                    .commit()
-            }
+            btnPlus.setOnClickListener { viewModel.addValue() }
+            btnMinus.setOnClickListener { viewModel.subtractValue() }
+            btnCleanValues.setOnClickListener { viewModel.cleanValues() }
         }
     }
 

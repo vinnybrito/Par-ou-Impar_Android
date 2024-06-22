@@ -3,13 +3,13 @@ package com.vinicius.projetoparouimpar.fragment
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
-import com.vinicius.projetoparouimpar.extensionsfiles.ONE
-import com.vinicius.projetoparouimpar.extensionsfiles.TWO
-import com.vinicius.projetoparouimpar.extensionsfiles.ZERO
+import com.vinicius.projetoparouimpar.extensions.ONE
+import com.vinicius.projetoparouimpar.extensions.TWO
+import com.vinicius.projetoparouimpar.extensions.ZERO
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 
-class EvenOrOddViewModel: ViewModel() {
+class EvenOrOddViewModel : ViewModel() {
 
     private val _numericValue = MutableStateFlow<Int?>(null)
     val numericValue = _numericValue.asStateFlow()
@@ -34,12 +34,12 @@ class EvenOrOddViewModel: ViewModel() {
     }
 
     fun cleanValues() {
-        _numericValue.value = 0
+        _numericValue.value = Int.ZERO
     }
 
     fun evenOrOdd() {
-        if(_numericValue.value?.rem(Int.TWO) == Int.ZERO) {
-            if(_numericValue.value!! >= Int.ONE) {
+        if (_numericValue.value?.rem(Int.TWO) == Int.ZERO) {
+            if (_numericValue.value!! >= Int.ONE) {
                 _resultValue.value = EVEN_MESSAGE
             }
         } else {

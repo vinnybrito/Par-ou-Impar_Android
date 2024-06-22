@@ -1,4 +1,4 @@
-package com.vinicius.projetoparouimpar.extensionsfiles
+package com.vinicius.projetoparouimpar.extensions
 
 val Int.Companion.ZERO: Int
     get() = 0

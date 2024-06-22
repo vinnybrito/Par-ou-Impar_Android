@@ -2,9 +2,7 @@ package com.vinicius.projetoparouimpar.activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.vinicius.projetoparouimpar.R
 import com.vinicius.projetoparouimpar.databinding.ActivityMainBinding
-import com.vinicius.projetoparouimpar.fragment.EvenOrOddFragment
 
 class MainActivity : AppCompatActivity() {
 

@@ -1,10 +1,9 @@
 package com.vinicius.projetoparouimpar.fragment
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
-import com.vinicius.projetoparouimpar.extensionsfiles.ZERO
+import com.vinicius.projetoparouimpar.extensions.ZERO
 import junit.framework.TestCase.assertEquals
 import kotlinx.coroutines.ExperimentalCoroutinesApi
-import kotlinx.coroutines.test.runBlockingTest
 import kotlinx.coroutines.test.runTest
 import org.junit.Rule
 import org.junit.Test
